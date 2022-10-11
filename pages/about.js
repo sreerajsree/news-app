@@ -1,10 +1,32 @@
 import React from "react";
 import NavBar from "../components/NavBar";
+import Head from "next/head";
 
 const EOM = ({ employee }) => {
   console.log(employee);
   return (
     <>
+      <Head>
+        <title>About Dev</title>
+        <meta
+          name="description"
+          content={`This month's employee of the month is ${employee.name}`}
+        />
+
+        <meta property="og:image" content={employee.image} />
+        <meta property="og:title" content="Employee Of The Month" />
+        <meta
+          property="og:description"
+          content={`This month's employee of the month is ${employee.name}`}
+        />
+
+        <meta property="twitter:image" content={employee.image} />
+        <meta property="twitter:title" content="Employee Of The Month" />
+        <meta
+          property="twitter:description"
+          content={`This month's employee of the month is ${employee.name}`}
+        />
+      </Head>
       <div className="max-w-[600px] mx-auto flex flex-col h-[100vh]">
         <NavBar />
         <div className="my-20">
