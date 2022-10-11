@@ -27,8 +27,8 @@ const EOM = ({ employee }) => {
           content={`This month's employee of the month is ${employee.name}`}
         />
       </Head>
-      <div className="max-w-[600px] mx-auto flex flex-col h-[100vh]">
-        <NavBar />
+      <NavBar />
+      <div className="max-w-[600px] mx-auto flex flex-col h-5/6 items-center justify-center">
         <div className="my-20">
           <h1 className="font-bold text-3xl text-center">About Dev</h1>
         </div>

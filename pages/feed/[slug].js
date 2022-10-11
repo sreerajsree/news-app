@@ -12,12 +12,12 @@ const Feed = ({ pageNumber, articles }) => {
         <meta property="og:description" content={articles[0]?.description} />
         <meta property="og:title" content={articles[0]?.title + " and more!"} />
       </Head>
-      <div className="max-w-[600px] mx-auto flex flex-col h-[100vh]">
-        <NavBar />
+      <NavBar />
+      <div className="container mx-auto flex flex-col h-5/6">
         {articles.map((article, index) => (
           <div
             key={index}
-            className="max-w-[500px] mx-auto border-b-2 border-black"
+            className="max-w-[350px] md:max-w-[500px] mx-auto border-b-2 border-black"
           >
             <h2
               onClick={() => (window.location.href = article.url)}
